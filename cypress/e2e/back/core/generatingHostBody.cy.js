@@ -20,20 +20,21 @@ const url = "http://192.168.1.18:8082";
 
 describe('Generating mass of data to send HOST request', () => {
     ;[
-        { scenario: 'Sending Region create method', method: 'POST', url: `${url}/regions`, sendingdata: bodyRegionCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
-        { scenario: 'Sending Sites create method', method: 'POST', url: `${url}/sites`, sendingdata: bodySiteCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
-        { scenario: 'Sending Suppliers create method', method: 'POST', url: `${url}/suppliers`, sendingdata: bodySupplierCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
-        { scenario: 'Sending Vendors create method', method: 'POST', url: `${url}/vendors`, sendingdata: bodyVendorCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
+        { scenario: 'Sending Region create method', method: 'POST', useAuthentication: falso, url: `${url}/regions`, sendingdata: bodyRegionCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
+        { scenario: 'Sending Sites create method', method: 'POST', useAuthentication: falso, url: `${url}/sites`, sendingdata: bodySiteCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
+        { scenario: 'Sending Suppliers create method', method: 'POST', useAuthentication: falso, url: `${url}/suppliers`, sendingdata: bodySupplierCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
+        { scenario: 'Sending Vendors create method', method: 'POST', useAuthentication: falso, url: `${url}/vendors`, sendingdata: bodyVendorCreate, expectedStatusCode: 201, assertResponse: expectSuccessOperation },
 
     ].forEach(data => {
 
         it(`Scenario - ${data.scenario}`, function () {
+            const requestToken = data.useAuthentication ? token : undefined;
 
             bodyAPI = data.sendingdata;
             const logbodyAPI = JSON.stringify(bodyAPI, undefined, 2);
             cy.log(`bodyAPI = ${logbodyAPI}`);
 
-            cy.req(data.method, data.url, bodyAPI).then((respReq) => {
+            cy.req(data.method, data.url, requestToken, bodyAPI).then((respReq) => {
                 expect(respReq.statusCod).to.deep.equal(data.expectedStatusCode);
                 data.assertResponse(cy, respReq, data.expectedRetBody);
                 cy.writeFile(`cypress/fixtures/core/host/bodyHost.js`, {
