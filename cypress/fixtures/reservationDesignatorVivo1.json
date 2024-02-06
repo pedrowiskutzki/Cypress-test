@@ -1,0 +1,163 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "href",
+        "serviceType",
+        "name",
+        "description",
+        "state",
+        "category",
+        "isServiceEnabled",
+        "hasStarted",
+        "startMode",
+        "isStateful",
+        "startDate",
+        "serviceSpecification",
+        "serviceCharacteristic",
+        "place",
+        "@type",
+        "@schemaLocation"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "href": {
+            "type": "string"
+        },
+        "serviceType": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "state": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "isServiceEnabled": {
+            "type": "boolean"
+        },
+        "hasStarted": {
+            "type": "boolean"
+        },
+        "startMode": {
+            "type": "string"
+        },
+        "isStateful": {
+            "type": "boolean"
+        },
+        "startDate": {
+            "type": "string"
+        },
+        "serviceSpecification": {
+            "type": "object",
+            "required": [
+                "id",
+                "href",
+                "name",
+                "version",
+                "@referredType"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "@referredType": {
+                    "type": "string"
+                }
+            }
+        },
+        "serviceCharacteristic": {
+            "type": "array"
+        },
+        "place": {
+            "type": "object",
+            "required": [
+                "cnl",
+                "city",
+                "@type",
+                "network_owner",
+                "streetNr",
+                "centralOffice",
+                "streetCode",
+                "locality",
+                "cnlAcronym",
+                "streetName",
+                "telephonicArea",
+                "stateOrProvince",
+                "geographicSubAddress",
+                "postCode",
+                "id"
+            ],
+            "properties": {
+                "cnl": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "@type": {
+                    "type": "string"
+                },
+                "network_owner": {
+                    "type": "string"
+                },
+                "streetNr": {
+                    "type": "string"
+                },
+                "centralOffice": {
+                    "type": "string"
+                },
+                "streetCode": {
+                    "type": "string"
+                },
+                "locality": {
+                    "type": "string"
+                },
+                "cnlAcronym": {
+                    "type": "string"
+                },
+                "streetName": {
+                    "type": "string"
+                },
+                "telephonicArea": {
+                    "type": "string"
+                },
+                "stateOrProvince": {
+                    "type": "string"
+                },
+                "geographicSubAddress": {
+                    "type": "array"
+                },
+                "postCode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "@type": {
+            "type": "string"
+        },
+        "@schemaLocation": {
+            "type": "string"
+        }
+    }
+}

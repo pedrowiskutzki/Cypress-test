@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+.DS_Store
+# package-lock.json
+mochawesome-report/
+cypress/reports/
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress.env.json
+allure-results/
+allure-report/
+
+#dependencies
+node_modules/
+xunit.xml

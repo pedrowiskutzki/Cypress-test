@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://gabinete.stg.pdpj.jus.br",
+  "env": {
+    "environment": "stg",
+    "logon": "93526059187",
+    "password": "Teste!123"
+  }
+}

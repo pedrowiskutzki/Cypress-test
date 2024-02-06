@@ -1,0 +1,47 @@
+{
+  "name": "automation-frontend-and-backend-with-cypress",
+  "version": "1.0.1",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "e2e": "cypress run --env allure=true",
+    "pretest": "(if exist allure-results (rmdir /S /Q allure-results && mkdir allure-results)) && if exist allure-report rmdir /q /s allure-report && if exist cypress\\screenshots rmdir /q /s cypress\\screenshots && if exist cypress\\videos rmdir /q /s cypress\\videos",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "test": "npm run script && npm run report:allure",
+    "script": "cypress run cypress/e2e/back/qualification.cy.js --env allure=true --reporter mocha-allure-reporter",
+    "report-run": "cypress run",
+    "merge-report": "npx mochawesome-merge  cypress/reports/mocha/*.json -o cypress/reports/report.json",
+    "marge-report": "npx marge cypress/reports/report.json --reportDir ./ --inline"
+  },
+  "keywords": [],
+  "author": "Rafael Torres dos Santos <rafael.torres@cnj.jus.br>",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^1.5.0",
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "cypress": "12.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.6.1",
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-xpath": "^2.0.0",
+    "faker": "^5.5.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.25.0",
+    "cypress-plugin-api": "^2.11.1",
+    "faker-br": "^0.4.1",
+    "har-validator": "^5.1.5",
+    "mocha-allure-reporter": "^1.4.0",
+    "npm": "^9.1.2",
+    "xml-loader": "^1.2.1"
+  },
+  "overrides": {
+    "xml2js": "^0.5.0"
+  }
+}
