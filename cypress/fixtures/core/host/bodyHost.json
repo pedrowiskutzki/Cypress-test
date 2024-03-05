@@ -1,0 +1,76 @@
+{
+  "name": "Valdirene",
+  "site": {
+    "id": "6d2f70f2-f6c8-4aa3-bda1-4eebc16ac02f"
+  },
+  "region": {
+    "id": "842788f6-45aa-4fea-a798-835db6fa7941"
+  },
+  "vendor": {
+    "id": "f783ba04-499f-449e-b40d-19eee262d566"
+  },
+  "supplier": {
+    "id": "2dd0453f-37e4-4adc-82b6-58b3043e5e8d"
+  },
+  "platform": {},
+  "active": true,
+  "sitePosition": "corporativo_cyan.rp9",
+  "managementBoard": {
+    "distribution": {
+      "id": "c1385024-0039-4640-a9da-d1266044fa81"
+    },
+    "template": {
+      "id": "30294821-48e3-4707-bf61-9a4c609bc851"
+    },
+    "active": true,
+    "templatesCustom": [
+      {
+        "id": "0a473be1-fd26-4216-bb3e-aee189663e04"
+      }
+    ],
+    "snmpIpAddress": "24.211.249.22",
+    "snmpVersion": "SNMPv1",
+    "snmpCommunity": "Rejane",
+    "snmpContextName": "",
+    "snmpSecurityName": "",
+    "snmpSecurityLevel": null,
+    "snmpAuthProtocol": "",
+    "snmpAuthPassphrase": "",
+    "snmpPrivacyProtocol": "",
+    "snmpPrivacyPassphrase": ""
+  },
+  "operatingSystem": {
+    "distribution": {
+      "id": "c1385024-0039-4640-a9da-d1266044fa81"
+    },
+    "template": {
+      "id": "d0a559a4-c8fe-4c1d-b391-850c9ed15486"
+    },
+    "active": true,
+    "templatesCustom": [
+      {
+        "id": "0a473be1-fd26-4216-bb3e-aee189663e04"
+      }
+    ],
+    "sshIpAddress": "165.146.203.249",
+    "sshUsername": "testessh",
+    "sshPassword": "",
+    "snmpIpAddress": "29.37.126.137",
+    "snmpVersion": null,
+    "snmpCommunity": "",
+    "snmpContextName": "",
+    "snmpSecurityName": "",
+    "snmpSecurityLevel": null,
+    "snmpAuthProtocol": "",
+    "snmpAuthPassphrase": "",
+    "snmpPrivacyProtocol": "",
+    "snmpPrivacyPassphrase": ""
+  },
+  "dracoActiveServicesMonitoring": null,
+  "filesMonitoring": null,
+  "haProxyMonitoring": null,
+  "tags": [
+    {}
+  ],
+  "huaweiNCEMonitoring": null
+}

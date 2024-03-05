@@ -1,0 +1,16 @@
+{
+  "limit": 0,
+  "offset": 0,
+  "sortColumn": "string",
+  "sortOrder": "string",
+  "active": true,
+  "siteId": "08481111-c6b0-47eb-8b2f-168d5567c9d5",
+  "supplierId": "a2c20120-896a-4193-9099-e5c4809604f7",
+  "vendorId": "67acf788-ef84-4689-a8cf-5cb77b4cc04a",
+  "regionId": "09dc1f47-2efd-4b06-9cbc-4de7ad17f138",
+  "tagId": "c8e6aea0-7b4d-4ca9-a45e-d5523bdb6099",
+  "torreId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ips": [
+    "246.27.3.235"
+  ]
+}

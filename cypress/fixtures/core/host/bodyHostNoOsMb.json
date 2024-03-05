@@ -1,0 +1,22 @@
+{
+  "name": "Ilka",
+  "site": {
+    "id": "6d2f70f2-f6c8-4aa3-bda1-4eebc16ac02f"
+  },
+  "region": {
+    "id": "842788f6-45aa-4fea-a798-835db6fa7941"
+  },
+  "vendor": {
+    "id": "f783ba04-499f-449e-b40d-19eee262d566"
+  },
+  "supplier": {
+    "id": "2dd0453f-37e4-4adc-82b6-58b3043e5e8d"
+  },
+  "platform": {},
+  "active": true,
+  "sitePosition": "avon_steel_solomon_islands_dollar.nitf",
+  "dracoActiveServicesMonitoring": null,
+  "filesMonitoring": null,
+  "haProxyMonitoring": null,
+  "huaweiNCEMonitoring": null
+}

@@ -28,7 +28,7 @@ module.exports = defineConfig({
     },
     experimentalRunAllSpecs: true,
     video: true,
-    baseUrl: 'http://10.11.187.35:8080',
+    // baseUrl: 'http://10.11.187.35:8080',
     excludeSpecPattern: [
       'performance*',
       'gobackoldmenu*',
@@ -37,3 +37,4 @@ module.exports = defineConfig({
     ],
   },
 })
+
